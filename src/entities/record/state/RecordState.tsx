@@ -7,7 +7,7 @@ import { initialRecordState } from './InitialRecordState';
 export const RecordState = (props: any) => {
     const [state, dispatch] = React.useReducer(recordReducer, initialRecordState)
 
-    const recordService: RecordService = new RecordService();
+    const recordService: RecordService = new RecordService(dispatch);
 
     return (
         <RecordContext.Provider
