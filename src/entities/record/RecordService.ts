@@ -2,14 +2,14 @@ import { CreateRecordRequestModel } from "./models/CreateRecordRequestModel";
 import { Record } from "./models/Record";
 import { Dispatch } from "react";
 import { RecordAction } from "./models/action/RecordAction";
-import axios, { AxiosInstance } from "axios";
+import Axios, { AxiosInstance } from "axios";
 
 // TODO
 export class RecordService {
-    private httpClient: AxiosInstance = axios.create({baseURL: process.env.REACT_APP_BACKEND_URL});
+    private httpClient: AxiosInstance = Axios.create({baseURL: process.env.REACT_APP_BACKEND_URL});
     constructor(private dispatch: Dispatch<RecordAction>) { }
     
-    Create(record: CreateRecordRequestModel) {
+    Create(record: CreateRecordRequestModel): string {
         throw new Error("not implemented");
     }
 
@@ -17,7 +17,12 @@ export class RecordService {
         throw new Error("not implemented");
     }
 
-    Get(id: string): Record {
+    Get(recordId: string): Record {
         throw new Error("not implemented");
     }
+
+    GetSum(): number {
+        throw new Error("not implemented");
+    }
+
 }
