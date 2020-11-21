@@ -6,6 +6,7 @@ export const recordReducer = (state: IRecordState, action: RecordAction): IRecor
     switch(action.type) {
         
         default:
-            return state
+            return state;
     }
+
 }
